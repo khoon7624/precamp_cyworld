@@ -2,10 +2,40 @@
 <html lang="ko">
   <head>
     <title>Document</title>
+    <style>
+      form{
+        width: 300px;
+      }
+      .wrapper{
+        display: flex;
+        flex-direction: column;
+      }
+      input{width: 100%;}
+      input[type=text]{height: 30px;}
+      .access__input{border: 1px solid #c1c1c1; display: flex; flex-direction: row; justify-content: space-between; width: 100%; height: 30px; padding: 0 10px; box-sizing: border-box;}
+      .phone__area{display: flex; flex-direction: row;}
+      #timer{color: red;}
+    </style>
   </head>
   <body>
-    <div id="target">Hello</div>
-    <button onclick="greeting()">button</button>
-    <script src="./01-variable.js"></script>
+    <form action="">
+      <div class="wrapper">
+        <h1>회원가입</h1>
+        <div class="email__input">
+          <input type="text">
+        </div>
+        <div class="phone__area">
+          <input type="text">
+          <button id="getNumber" type="button" onclick="accessPhoneNum()">인증번호 받기</button>
+        </div>
+        <div class="access__input">
+          <span id="result"></span>
+          <span id="timer"></span>
+          <button type="button" id="confirmBtn">인증완료</button>
+        </div>
+        <button>가입하기</button>
+      </div>
+    </form>
+    <script src="./01-variable2.js"></script>
   </body>
 </html>
